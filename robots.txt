@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /about/cv-en-2016.pdf
