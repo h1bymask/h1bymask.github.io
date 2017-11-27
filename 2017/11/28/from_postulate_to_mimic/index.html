@@ -11,10 +11,12 @@
             <hr>
 	    <br>
 		<p>Let's look how Intel early x86 CPUs with analogous architectures (4004 -> 8088 in IBM XT) were working with, say, video ram (pseudocode):</p>
-		<p>This was simply printint <b>X</b> on the upper-left corner of the display: <b>mov byte ptr [0B800h:0000], 'X'</b></p>
+		<p>This was simply printing <b>X</b> at the upper-left corner of the display:
+		<br>
+		<b>mov byte ptr [0B800h:0000], 'X'</b></p>
 		<p>This code can still be executed (mov ax, 0b800h / mov es, ax / mov byte ptr [es:0], 'X') on any modern x86 compatible PC even without any OS at all in the CPU real mode (obviously until <a href="http://www.uefi.org/sites/default/files/resources/Brian_Richardson_Intel_Final.pdf">UEFI CSM gets disabled</a>).</p>
 		<p>But now... <i>voila!</i> what is done to output <b>X</b> in the upper-left corner of the text terminal:</p>
-		<p>&nbsp;&nbsp;&nbsp;&nbsp;Video card -> SMM -> Windows HAL -> Windows Video driver -> Direct2D -> Console HANDLE -> Output text.</p>
+		<p>Video card -> SMM -> Windows HAL -> Windows Video driver -> Direct2D -> Console HANDLE -> Output text.</p>
 		<p>That is the price of multi-tasking, isolation and high level languages.
 		But are the data and the code the same in such approach as per Von Naumann architecture?
 		The answer is obviously "No". One could run program directly in the video memory of IBM PC XT but the same thing will be just impossible in the modern PC.</p>
@@ -22,9 +24,10 @@
 		<a href="https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#CSM_booting">Compatibility Support Module booting<a>
 		to, say,
 		<a href="https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface#Services">Graphics Output Protocol</a>
+		.
 		<p>So the Von Neumann architecture <a href="http://www.codersnotes.com/notes/the-death-of-the-von-neumann-architecture/">is not the case</a> at the moment.</p>
 	    <br>
-		<p>But the question is: so what? Von Neumann architecture was always blamed for allowing <a href="https://en.wikipedia.org/wiki/Arbitrary_code_execution">RCE</a> on the devices, by design. So why the systems are still being hacked?<p>
+		<p>But the question is: so what? Von Neumann architecture was always blamed for allowing <a href="https://en.wikipedia.org/wiki/Arbitrary_code_execution">RCE</a> on the devices, by design. So why the modern systems are still being hacked? The answer is: it is done so for the other business purposes, as usual.<p>
         </div>
     </body>
 </html>
