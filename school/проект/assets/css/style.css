@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+}
+
+.navigator {
+  background-color: #505050;
+  width: 100%;
+  height: 6vh;
+}
+
+
+
+.navigator a {
+  color: #DCDCDC;
+  font-size: 1.5rem;
+  margin-left: 30px;
+  margin-top: 4px;
+  text-transform: uppercase;
+  font-family: 'Philosopher';
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #A5A5A5;
+  margin-bottom: 100px;
+}
+
+.text-main {
+  text-align: center;
+  position: relative;
+  top: 10%;
+  color: #fff;
+}
+
+.main h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Kaushan_Script';
+}
+
+.main p {
+  margin-top: 5px;
+  font-size: 1.5rem;
+  font-family: 'Comfortaa';
+}
+
+.managers {
+  height: 80vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.managers h2 {
+  font-size: 3rem;
+  color: #2c3e50;
+  font-family: 'Comfortaa';
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.members {
+  height: 210vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.members h2 {
+  font-size: 3rem;
+  color: #2c3e50;
+  font-family: 'Comfortaa';
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.container {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.card {
+  width: 25%;
+  height: 250px;
+  display: inline-block;
+  margin: 50px;
+  margin-bottom: 100px;
+}
+
+.special_pose {
+  text-align: center;
+  position: relative;
+}
+
+.name {
+  text-align: center;
+  font-family: 'Comfortaa';
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.name a {
+  text-decoration: none;
+  color: black;
+}
+
+.special_name {
+  margin-left: 10px;
+}
+
+.ending {
+  width: 100%;
+  height: 30vh;
+  background-color: #E8E8E8;
+}
+
+.container_2 {
+  width: 100%;
+  display: flex;
+}
+
+.robot {
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+.links {
+  margin-left: 400px;
+  margin-top: 70px;
+}
+
+.links_2 {
+  margin-left: 100px;
+  margin-top: 70px;
+}
+
+.container_3 {
+  display: flex;
+  height: 80vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.member_photo {
+  margin-left: 800px;
+  margin-top: 60px;
+}
+
+.member_text {
+  border: 5px solid;
+  background-color: #E8E8E8;
+  height: 400px;
+  width: 1000px;
+  margin-top: 50px;
+  margin-right: 100px;
+}
+
+.container h1 {
+  font-size: 4rem;
+  color: #2c3e50;
+  font-family: 'Kaushan_Script';
+  text-transform: uppercase;
+  margin-top: 50px;
+
+}
