@@ -3,3 +3,4 @@ Allow: /about/
 Disallow: /about/*-2016*
 Disallow: /index.html
 Disallow: /
+Disallow: /school/*
