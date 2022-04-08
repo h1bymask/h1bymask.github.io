@@ -9,6 +9,7 @@
 				let url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/prezo/"
 				let response = await fetch(url + "/new_index.html");
 				let html = await response.text();
+				html = html.replace(/"[^"]*brython[^"]*.js"/g,"LALALA");
 				document.open();
 				document.write('<base href="' + url + '">');
 				document.write(html);
