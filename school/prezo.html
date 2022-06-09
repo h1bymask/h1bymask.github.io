@@ -11,9 +11,9 @@
 				let html = await response.text();
 				document.open();
 				document.write('<base href="' + url + '">');
-				document.write(html.replace(/<script type="text.python">/, `
+				document.write(html.replace(/(<script type="text.python">)/, `$1
 import sys
-sys.path.append("` + url + ")');  //.replace(/"[^"]*(brython[^"]*.js)"/g, document.location.href + "/../$1"));
+sys.path.append("` + url + '")');  //.replace(/"[^"]*(brython[^"]*.js)"/g, document.location.href + "/../$1"));
 				document.close();
 			})();
 		</script>
