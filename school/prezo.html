@@ -11,9 +11,10 @@
 				let html = await response.text();
 				document.open();
 				document.write('<base href="' + url + '">');
-				document.write(html.replace(/(<script type="text.python">)/, `$1
-import sys
-sys.path.append("` + url + '")'));  // https://groups.google.com/g/brython/c/lMF2I2eur2E (How to import python library from url in Brython): no effect at all
+//				document.write(html.replace(/(<script type="text.python">)/, `$1
+//import sys
+//sys.path.append("` + url + '")'));  // https://groups.google.com/g/brython/c/lMF2I2eur2E (How to import python library from url in Brython): no effect at all
+
 					//.replace(/"[^"]*(brython[^"]*.js)"/g, document.location.href + "/../$1"));
 				document.close();
 			})();
