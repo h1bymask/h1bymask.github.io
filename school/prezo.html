@@ -7,7 +7,7 @@
 		<script>
 			(async function main(){
 				let url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/prezo/"
-				let response = await fetch(url + "new_index.html" + ((document.location.search == null || document.location.search == '') ? `?${document.location.search}`));
+				let response = await fetch(url + "new_index.html" + ((document.location.search == null || document.location.search == '') ? '' : `?${document.location.search}`));
 				let html = await response.text();
 				document.open();
 				document.write('<base href="' + url + '">');
