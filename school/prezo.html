@@ -13,7 +13,7 @@
 				document.write('<base href="' + url + '">');
 				document.write(html);
 				
-				document.write(html.replace(/<script\s+src="[^"]*(brython[^"]*.js)">[\s\n]+</script>/gim, ''));
+				document.write(html.replace(/<script\s+src="[^"]*(brython[^"]*.js)">[\s\n]+<\/script>/gim, ''));
 
 //				document.write(html.replace(/(<script type="text.python">)/, `$1
 //import sys
