@@ -4,9 +4,24 @@
 	<body>
 		<script>
 			(async function main(){
-				let url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2";
-				let response = await fetch(url + "/index.html");
+				let url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2/";
+				let response = await fetch(url + "index.html");
 				let html = await response.text();
+//var styleElem = document.createElement('style');
+//styleElem.type = 'text/css' ;
+//let response = await fetch(url + "/index.html");
+//let css = await response.text();
+//var css = '.fontRed{color:red;}' ;
+//if(styleElem.styleSheet){
+//    styleElem.styleSheet.cssText = css;
+//}
+//else{
+//    styleElem.appendChild(document.createTextNode(css));
+//}
+//
+// Append the Style element to the Head
+//var head = document.getElementsByTagName('head')[0] ;
+//head.appendChild(styleElem);
 				document.open();
 				document.write('<base href="' + url + '">');
 				document.write(html);
