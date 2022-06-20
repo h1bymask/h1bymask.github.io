@@ -5,11 +5,11 @@
 		<script>
 			(async function main(){
 				const url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2/";
-				let response = await fetch(url + ((document.location.search == null || document.location.search == '') ? 'index.html' : `?${document.location.search.replace(/^\//,'')}`));
+				let response = await fetch(url + ((document.location.search == null || document.location.search == '' || document.location.search == '?') ? 'index.html' : `?${document.location.search.replace(/^\//,'')}`));
 				let html = await response.text();
 				document.open();
 				document.write('<base href="' + url + '">');
-				html = html.replace(/<link.*href=.*style.css.*>/i, '').replace(/(<a[^>]+href=['"])([^'":]*['"][^>]*>)/i, '$1'+`${document.location.href.split("?")[0]}?`+'$2');
+				html = html.replace(/<link.*href=.*style.css.*>/igm, '').replace(/(<a[^>]+href=['"])([^'":]*['"][^>]*>)/igm, '$1'+`${document.location.href.split("?")[0]}?`+'$2');
 				document.write(html);
 				document.close();
 				const head = document.getElementsByTagName('head')[0];
