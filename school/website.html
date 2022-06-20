@@ -16,7 +16,7 @@
 				styleElem.type = 'text/css';
 				response = await fetch(url + "style.css");
 				const css = await response.text();
-				styleElem.styleSheet.cssText = css;
+				styleElem.appendChild(document.createTextNode(css));
 				head.appendChild(styleElem);
 			})();
 		</script>
