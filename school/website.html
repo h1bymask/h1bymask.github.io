@@ -19,7 +19,7 @@
 				response = await fetch(url + "style.css");
 				const css = await response.text();
 				styleElem.appendChild(document.createTextNode(css));
-				head.appendChild(styleElem);
+				head.insertBefore(styleElem, head.firstChild);
 			})();
 		</script>
 	</body>
