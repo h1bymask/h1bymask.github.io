@@ -4,11 +4,13 @@
 	<body>
 		<script>
 			(async function main(){
+				const _this = document.location.href;
 				const url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2/";
-				let response = await fetch(url + "index.html");
+				let response = await fetch(url + ((document.location.search == null || document.location.search == '') ? 'index.html' : `?${document.location.search}`));
 				const html = await response.text();
 				document.open();
 				document.write('<base href="' + url + '">');
+				html = html.replace(/<link.*href=.*css>/i, '').replace(/<a[^>]+href=['"]([^'"]*)['"][^>]*>/i, `${document.location.href.split("?")[0]}?`+'$1');
 				document.write(html);
 				document.close();
 				const head = document.getElementsByTagName('head')[0];
