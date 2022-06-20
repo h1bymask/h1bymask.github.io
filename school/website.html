@@ -4,7 +4,6 @@
 	<body>
 		<script>
 			(async function main(){
-				const _this = document.location.href;
 				const url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2/";
 				let response = await fetch(url + ((document.location.search == null || document.location.search == '') ? 'index.html' : `?${document.location.search.replace(/^\//,'')}`));
 				let html = await response.text();
