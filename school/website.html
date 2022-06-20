@@ -5,7 +5,7 @@
 		<script>
 			(async function main(){
 				const url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2/";
-				let response = await fetch(url + ((document.location.search == null || document.location.search == '' || document.location.search == '?') ? 'index.html' : `${document.location.search.replace(/^[\?]*//,'')}`));
+				let response = await fetch(url + ((document.location.search == null || document.location.search == '' || document.location.search == '?') ? 'index.html' : `${document.location.search.replace(/^[\?]*/,'')}`));
 				let html = await response.text();
 				document.open();
 				document.write('<base href="' + url + '">');
