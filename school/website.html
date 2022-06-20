@@ -4,8 +4,8 @@
 	<body>
 		<script>
 			(async function main(){
-				let url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2/"
-				let response = await fetch(url + "new_index.html"));
+				let url = "https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2";
+				let response = await fetch(url + "/index.html");
 				let html = await response.text();
 				document.open();
 				document.write('<base href="' + url + '">');
