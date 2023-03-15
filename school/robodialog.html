@@ -4,7 +4,10 @@
 	<body>
 		<script type="text/javascript" src="proxy.js">&nbsp;</script>
 		<script type="text/javascript" >
-			proxy("https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/site_v2/");
+			if (ua.includes('iPhone OS') || ua.includes('Android'))
+				proxy("https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/vizitka mob-ver/");
+			else
+				proxy("https://raw.githubusercontent.com/h1bymask/msurobodialog/main/website/vizitka/");
 		</script>
 	</body>
 </html>
